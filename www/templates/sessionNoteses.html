@@ -1,0 +1,28 @@
+<ion-view cache-view="false" view-title="Session Noteses">
+<ion-content padding="false" class="has-header">
+ 
+	   <ion-list id="session_list" class="list" style="padding:0px;margin:0pxs">
+
+
+      <a class="item item-avatar item-icon-left item-icon-right" ng-repeat="item in all_session_noteses" ng-click="call(item)">
+        <div class="icon" style="background:#00abe5;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 13px;
+    font-size: 20px;
+    font-color:#ffffff;
+    padding-top: 10px;
+    color:#fff;
+    margin-top: 15px;
+    font-weight: bold;text-align:center">{{item.session_Title.charAt(0) }}</div>
+
+				<h2 class="list-title text-bolder">{{item.session_Title }}</h2>
+				
+				<i class="icon ion-chevron-right"></i>
+			</a>
+
+    
+  </ion-content>
+  
+  </ion-view>

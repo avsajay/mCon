@@ -1,0 +1,56 @@
+<ion-view cache-view="false" view-title="Conferences">
+
+	<ion-nav-buttons side="right">
+		<a href="#/menu-content/addConference">
+		<div style="padding:4px;font-size:20px">
+        <i class="icon2 ion-ios-plus-outline"></i>
+      </div>
+    </a>
+	</ion-nav-buttons>
+	<ion-content padding="false" class="has-header" style="background:{{body}}">
+  <div id="loading" class="{{loadingClass}}">
+  <div class='loader4'>
+   <div>
+     <div>
+       <div>
+         <div>
+           <div>
+             <div>
+               <div>
+                 <div>
+                   <div>
+                     <div></div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+  </div>
+  <div style="text-align:center;color:#fff;font-weight:normal"><p>Please wait while we sync data</p></div>
+  </div>
+  <div id="success" class="{{successClass}}">
+  <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+  <br>
+  <h4 style="text-align:center;color:#fff">Successfully Synced</h4>
+  </div>
+    <div style="display:{{dataClass}}">
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="text" placeholder="Search" ng-model="search">
+	</label>
+
+	<div class="list">
+			<div class="item item-avatar item-icon-left item-icon-right"  ng-repeat="item in conferences_list | filter:search" ng-click="call(item)">
+      <img ng-src="{{item.doc.image}}" class="ion icon">
+      <h2 class="list-title" display:"align:center">{{item.doc.conference_Name}}</h2>
+			<p>{{item.doc.conference_FromDate | date :  "MMM d, y"}} -{{item.doc.conference_ToDate | date :  "MMM d, y"}}</p>
+			<i class="icon ion-ios-arrow-right"></i>
+      </div>
+	</div>
+	</ion-content>
+
+</ion-view>

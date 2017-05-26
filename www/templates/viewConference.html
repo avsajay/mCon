@@ -1,0 +1,56 @@
+<ion-view cache-view="false">
+<ion-nav-title>{{conferenceData1.conference_Name}}</ion-nav-title>
+  <ion-nav-buttons side="right">
+  </ion-nav-buttons>
+  <ion-content has-header="true">
+<div id="welcomeScreen" class="item item-text-wrap text-center">
+      <h2>{{conferenceData1.conference_Location}}</h2><br>
+      <p class="white-text"><i class="icon ion-calendar"></i>&nbsp; {{conferenceData1.conference_FromDate| date :  "MMM d, y"}} &nbsp;-&nbsp; <i class="icon ion-calendar"></i>&nbsp;{{conferenceData1.conference_ToDate| date :  "MMM d, y"}}</p>
+</div>
+
+	<div class="conference-row">
+      <div class="row-heading1 move-top">
+    <h4>Conference Details
+      <a href="#/menu-content/editConference">
+          <button class="roundedButtons dark-button white-text dark-border pull-right" style="margin-top:-6px;padding:2px;padding-left:10px;padding-right:10px;font-size:16px">Edit</button>
+      </a>
+    </h4>
+	</div>
+	</div>
+
+
+
+	<div class="conference-row">
+    <div class="row-heading move-top">
+      <p class="pull-left"></p>
+      <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Description</h4>
+</div>
+   <div>
+		<h4>{{conferenceData1.conference_Description}}</h4>
+
+  </div>
+</div>
+    <div class="conference-row">
+      <div class="row-heading move-top">
+        <p class="pull-left"></p>
+        <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Speakers</h4>
+      </div>
+             <div>
+		<h4>{{conferenceData1.conference_Speakers}}</h4>
+</div>
+
+
+    </div>
+
+	 <div class="conference-row">
+      <div class="row-heading move-top">
+        <p class="pull-left"></p>
+        <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Agenda</h4>
+      </div>
+  <div>
+		<h4>{{conferenceData1.conference_Agenda}}</h4>
+</div>
+
+    </div>
+  </ion-content>
+</ion-view>

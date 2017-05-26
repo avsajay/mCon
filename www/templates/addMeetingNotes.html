@@ -1,0 +1,23 @@
+<ion-view cache-view="false" title="Add Meeting Notes" id="page26">
+  <ion-content padding="true" class="has-header">
+
+		<div id="inputContainer" class="inputDemo">
+         <md-content layout-padding>
+
+            <form name="meetingNotesForm" ng-submit="submitForm(meetingNotesForm.$valid)" novalidate>
+
+               <md-input-container class="md-block">
+                  <label>Notes</label>
+                  <input md-maxlength="500" required name="MeetingNotes" ng-model="params.meeting_Notes">
+                  <div ng-messages="meetingNotesForm.MeetingNotes.$error">
+                     <div ng-message="required">This is required.</div>
+                     <div ng-message="md-maxlength">The notes has to be less than 500 characters long.</div>
+                  </div>
+               </md-input-container>
+<button class="button button-calm button-block roundedButtons" value="save" ng-disabled="meetingNotesForm.$invalid" ng-click="add(params)">Save</button>
+
+            </form>
+         </md-content>
+      </div>
+  </ion-content>
+</ion-view>

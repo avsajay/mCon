@@ -1,0 +1,100 @@
+<ion-view cache-view="false" title="Logistics">
+<ion-nav-buttons side="right">
+		<a href="#/menu-content/editlogistics">
+		<div style="padding:4px;font-size:20px">
+        <i class="icon2 ion-edit" ng-hide="{{isAdmin}}"></i>
+
+      </div>
+
+      </a>
+	</ion-nav-buttons>
+  <ion-content has-header="true">
+
+    <div class="row-heading move-top">
+      <p class="pull-left"></p>
+      <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Onsite Coordinator</h4>
+
+    <div class="item item-icon-left"><i class="icon ion-person"></i><font class="text-bolder">Name</font>
+      <p>{{logisticsDetails1.OnsiteCoordinator_Name}}</p>
+    </div>
+
+    <div class="item item-icon-left"><i class="icon ion-ios-email"></i><font class="text-bolder">Email</font>
+      <p>{{logisticsDetails1.OnsiteCoordinator_Email}}</p>
+    </div>
+
+	<div class="item item-icon-left"><i class="icon ion-ios-telephone"></i><font class="text-bolder">PhoneNumber</font>
+      <p>{{logisticsDetails1.OnsiteCoordinator_PhoneNumber}}</p>
+    </div>
+  </div>
+
+    <div class="conference-row">
+      <div class="row-heading move-top">
+        <p class="pull-left"></p>
+        <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Event Coordinator</h4>
+      </div>
+        <div class="item item-icon-left"><i class="icon ion-person"></i><font class="text-bolder">Name</font>
+      <p>{{logisticsDetails1.EventCoordinator_Name}}</p>
+    </div>
+
+    <div class="item item-icon-left"><i class="icon ion-ios-email"></i><font class="text-bolder">Email</font>
+      <p>{{logisticsDetails1.EventCoordinator_Email}}</p>
+    </div>
+
+	<div class="item item-icon-left"><i class="icon ion-ios-telephone"></i><font class="text-bolder">PhoneNumber</font>
+      <p>{{logisticsDetails1.EventCoordinator_PhoneNumber}}</p>
+    </div>
+    </div>
+
+	 <div class="conference-row">
+      <div class="row-heading move-top">
+        <p class="pull-left"></p>
+        <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Flight Details</h4>
+      </div>
+        <div class="item item-icon-left"><i class="icon ion-calendar"></i><font class="text-bolder">Start Date</font>
+      <p>{{logisticsDetails1.Start_Date | date :  "MMM d, y"}}</p>
+    </div>
+
+    <div class="item item-icon-left"><i class="icon ion-clock"></i><font class="text-bolder">Start Time</font>
+      <p>{{logisticsDetails1.Start_Time | date :  "h:mm a"}}</p>
+    </div>
+
+	<div class="item item-icon-left"><i class="icon ion-ios-home"></i><font class="text-bolder">City</font>
+      <p>{{logisticsDetails1.Start_City}}</p>
+    </div>
+	<div class="item item-icon-left"><i class="icon ion-android-plane"></i><font class="text-bolder">Airlines</font>
+      <p>{{logisticsDetails1.Start_Airlines}}</p>
+    </div>
+	<div class="item item-icon-left"><i class="icon ion-calendar"></i><font class="text-bolder">Arrival Date</font>
+      <p>{{logisticsDetails1.Arrival_Date | date :  "MMM d, y"}}</p>
+    </div>
+
+    <div class="item item-icon-left"><i class="icon ion-clock"></i><font class="text-bolder">Arrival Time</font>
+      <p>{{logisticsDetails1.Arrival_Time | date :  "h:mm a"}}</p>
+    </div>
+
+	<div class="item item-icon-left"><i class="icon ion-ios-home"></i><font class="text-bolder">City</font>
+      <p>{{logisticsDetails1.Arrival_City}}</p>
+    </div>
+	<div class="item item-icon-left"><i class="icon ion-android-plane"></i><font class="text-bolder">Airlines</font>
+      <p>{{logisticsDetails1.Arrival_Airlines}}</p>
+    </div>
+    </div>
+
+	 <div class="conference-row">
+      <div class="row-heading move-top">
+        <p class="pull-left"></p>
+        <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Hotel Details</h4>
+      </div>
+        <div class="item item-icon-left"><i class="icon ion-person"></i><font class="text-bolder">Name</font>
+      <p>{{logisticsDetails1.HotelName}}</p>
+    </div>
+
+    <div class="item item-icon-left"><i class="icon ion-compose"></i><font class="text-bolder">Comments</font>
+      <p>{{logisticsDetails1.comments}}</p>
+    </div>
+<br><br>
+    </div>
+
+
+  </ion-content>
+</ion-view>

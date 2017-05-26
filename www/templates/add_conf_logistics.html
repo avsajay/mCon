@@ -1,0 +1,152 @@
+<ion-view cache-view="false" title="Add Logistics">
+  <ion-content padding="true" class="has-header">
+
+		<div id="inputContainer" class="inputDemo">
+         <md-content layout-padding>
+
+            <form name="addLogisticsForm" ng-submit="submitForm(addLogisticsForm.$valid)" novalidate>
+				<div class="row-heading move-top">
+      <p class="pull-left"></p>
+      <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Onsite Coordinator</h4>
+
+
+  </div>
+
+			   <md-input-container class="md-block">
+                  <label>Name</label>
+                  <input required name="Name" ng-model="params.OnsiteCoordinator_Name">
+                  <div ng-messages="addLogisticsForm.OnsiteCoordinator_Name.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+			   
+			   <md-input-container class="md-block">
+                  <label>Email</label>
+                  <input required name="Email" ng-model="params.OnsiteCoordinator_Email"
+                     ng-pattern="/^.+@.+\..+$/" />
+                  <div ng-messages="addLogisticsForm.OnsiteCoordinator_Email.$error" role="alert">
+                     <div ng-message="pattern">
+                      Enter a valid email address.
+                     </div>
+					  <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+			     <md-input-container class="md-block">
+                  <label>PhoneNumber</label>
+                  <input name="PhoneNumber" ng-model="params.OnsiteCoordinator_PhoneNumber">
+
+               </md-input-container>
+			   			<div class="row-heading move-top">
+      <p class="pull-left"></p>
+      <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Event Coordinator</h4>
+
+
+  </div>
+  <md-input-container class="md-block">
+                  <label>Name</label>
+                  <input required name="Name" ng-model="params.EventCoordinator_Name">
+                  <div ng-messages="addLogisticsForm.EventCoordinator_Name.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+			   
+			   <md-input-container class="md-block">
+                  <label>Email</label>
+                  <input required name="Email" ng-model="params.EventCoordinator_Email"
+                     ng-pattern="/^.+@.+\..+$/" />
+                  <div ng-messages="addLogisticsForm.EventCoordinator_Email.$error" role="alert">
+                     <div ng-message="pattern">
+                      Enter a valid email address.
+                     </div>
+					  <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+			     <md-input-container class="md-block">
+                  <label>PhoneNumber</label>
+                  <input name="PhoneNumber" ng-model="params.EventCoordinator_PhoneNumber">
+
+               </md-input-container>
+  
+	   			<div class="row-heading move-top">
+      <p class="pull-left"></p>
+      <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Flight Details</h4>
+
+
+  </div>
+  <md-datepicker ng-model="params.Start_Date" md-placeholder="Start date"></md-datepicker>
+  <md-input-container class="md-block">
+                 <label>Start Time</label>
+                 <input type="time" required name="Start Time" ng-model="params.Start_Time">
+                 <div ng-messages="addLogisticsForm.Start_Time.$error">
+                    <div ng-message="required">This is required.</div>
+                 </div>
+              </md-input-container>
+  <md-input-container class="md-block">
+                  <label>City</label>
+                  <input required name="Name" ng-model="params.Start_City">
+                  <div ng-messages="addLogisticsForm.Start_City.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+			   <md-input-container class="md-block">
+                  <label>Airlines</label>
+                  <input required name="Name" ng-model="params.Start_Airlines">
+                  <div ng-messages="addLogisticsForm.Start_Airlines.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+              </md-input-container>
+			  <md-datepicker ng-model="params.Arrival_Date" md-placeholder="Arrival date"></md-datepicker>
+			  <md-input-container class="md-block">
+                 <label>Arrival Time</label>
+                 <input type="time" required name="Start Time" ng-model="params.Arrival_Time">
+                 <div ng-messages="addLogisticsForm.Arrival_Time.$error">
+                    <div ng-message="required">This is required.</div>
+                 </div>
+              </md-input-container>
+			  <md-input-container class="md-block">
+                  <label>City</label>
+                  <input required name="Name" ng-model="params.Arrival_City">
+                  <div ng-messages="addLogisticsForm.Arrival_City.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+			   <md-input-container class="md-block">
+                  <label>Airlines</label>
+                  <input required name="Name" ng-model="params.Arrival_Airlines">
+                  <div ng-messages="addLogisticsForm.Arrival_Airlines.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+              </md-input-container>
+  
+    			<div class="row-heading move-top">
+      <p class="pull-left"></p>
+      <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Hotel Details</h4>
+
+
+  </div>
+  <md-input-container class="md-block">
+                  <label>Name</label>
+                  <input required name="Name" ng-model="params.HotelName">
+                  <div ng-messages="addLogisticsForm.HotelName.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+  
+   <md-input-container class="md-block">
+                  <label>Comments</label>
+                  <input md-maxlength="300" name="Comments" ng-model="params.comments">
+                  <div ng-messages="addLogisticsForm.comments.$error">
+                     <div ng-message="required">This is required.</div>
+                     <div ng-message="md-maxlength">put the comments</div>
+                  </div>
+               </md-input-container> 
+  
+
+			
+<button class="button button-calm button-block roundedButtons" value="save" ng-disabled="addLogisticsForm.$invalid" ng-click="add(params)">Save</button>
+		  
+            </form>
+         </md-content>
+      </div>
+  </ion-content>
+</ion-view>

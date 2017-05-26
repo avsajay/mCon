@@ -1,0 +1,30 @@
+<ion-view title="Profile">
+  <ion-content padding="true" class="has-header">
+    <div id="profile-bg"></div>
+    <div id="content" >
+      <div id="profile-info" class="white-text">
+        <img id="profile-image" src="{{item.image}}">
+        <h2 class="white-text">{{item.name}}</h2>
+        <p >{{item.designation}}</p>
+      </div>
+
+    </div>
+    <div class="row text-center dark-background" style="background:#232527">
+      <div class="col white-text" style="border-right:1px solid #fff;"><h4 class="white-text">Staying At</h4><p>Haritha Hotel</p></div>
+      <div class="col white-text"><h4 class="white-text">Arriving On</h4><p>23/3/2017</p></div>
+    </div>
+    <div class="conference-row text-big">
+      <div class="row-heading move-top container">
+        <p class="pull-left"></p>
+        <h4 class="text-light-blue extra-padding ">Profile</h4>
+      </div>
+      <div style="margin-top:-10px">
+          <p class="item container"><i class="icon ion-person" style="font-size:20px;"></i> &nbsp;{{item.name}}</p>
+          <p class="item container"><i class="icon ion-ios-email" style="font-size:20px;"></i> &nbsp; {{item.email}}</p>
+          <p class="item container"><i class="icon ion-ios-telephone" style="font-size:20px;"></i> &nbsp;{{item.contact}}</p>
+      </div>
+    </div>
+
+  </ion-content>
+
+</ion-view>

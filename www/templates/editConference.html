@@ -1,0 +1,64 @@
+<ion-view cache-view="false" title="Edit Conference">
+  <ion-content padding="true" class="has-header">
+
+		<div id="inputContainer" class="inputDemo">
+         <md-content layout-padding>
+
+            <form name="editConferenceForm" ng-submit="submitForm(editConferenceForm.$valid)" novalidate>
+
+
+			   <md-input-container class="md-block">
+                  <label>Name</label>
+                  <input  name="ConferenceName" ng-disabled="true" ng-model="conferenceData1.conference_Name">
+
+               </md-input-container>
+			   <md-input-container class="md-block">
+                  <label>Location</label>
+                  <input  name="Location" ng-model="conferenceData1.conference_Location">
+
+               </md-input-container>
+
+			  <div class="row">
+			    <div class="col col-50">
+			  <md-datepicker ng-model="params.FromDate" md-placeholder="From date"></md-datepicker>
+      </div>
+	  <div class="col col-50">
+			  <md-datepicker ng-model="params.ToDate" md-placeholder="To date"></md-datepicker>
+      </div>
+	  </div>
+				 <md-input-container class="md-block">
+                  <label>Description</label>
+                  <input md-maxlength="200" name="Description" ng-model="conferenceData1.conference_Description">
+                  <div ng-messages="editConferenceForm.Description.$error">
+
+                     <div ng-message="md-maxlength">The notes has to be less than 300 characters long.</div>
+                  </div>
+               </md-input-container>
+
+			   <md-input-container class="md-block">
+                  <label>Speakers</label>
+                  <input md-maxlength="200" name="Speakers" ng-model="conferenceData1.conference_Speakers">
+                  <div ng-messages="editConferenceForm.Speakers.$error">
+
+                     <div ng-message="md-maxlength">The notes has to be less than 300 characters long.</div>
+                  </div>
+               </md-input-container>
+			   <md-input-container class="md-block">
+                  <label>Agenda</label>
+                  <input md-maxlength="200" name="Agenda" ng-model="conferenceData1.conference_Agenda">
+                  <div ng-messages="editConferenceForm.Agenda.$error">
+
+                     <div ng-message="md-maxlength">The notes has to be less than 300 characters long.</div>
+                  </div>
+               </md-input-container>
+
+
+
+
+<button class="button button-calm button-block roundedButtons" value="save" ng-disabled="editConferenceForm.$invalid" ng-click="edit(conferenceData1)">Save</button>
+		   <!--a href="#/menu-content/addSessionNotes1" class="button button-calm  button-block">Add</a-->
+            </form>
+         </md-content>
+      </div>
+  </ion-content>
+</ion-view>

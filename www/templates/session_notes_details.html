@@ -1,0 +1,26 @@
+
+<ion-view title="Session Notes">
+  <ion-content padding="true" class="has-header">
+ <div id="session" class="text-center">
+      <h2 class="white-text">{{session_notes_details.conference_name}}</h2>
+      <h4 class="white-text">{{session_notes_details.session_Title}}</h4>
+    </div>
+ 
+     <div class="row-heading move-top">
+        <p class="pull-left"></p>
+        <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Writer</h4>
+      </div>
+<div>
+<p style="font-style:italic">{{session_notes_details.username}}</p>
+</div> 
+    <div class="row-heading move-top">
+        <p class="pull-left"></p>
+        <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Notes</h4>
+      </div>
+<div>
+<p>{{session_notes_details.notes}}</p>
+ </div>
+  
+  </ion-content>
+  
+  </ion-view>

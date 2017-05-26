@@ -1,0 +1,86 @@
+<ion-view cache-view="false" view-title="Add Meeting">
+  <ion-nav-buttons side="right">
+
+  </ion-nav-buttons>
+<ion-content>
+ <div id="inputContainer" class="inputDemo">
+         <md-content layout-padding>
+		 <br><br>
+            <form name="meetingForm" ng-submit="submitForm(meetingForm.$valid)" novalidate>
+               <md-input-container class="md-block">
+                  <label>Title</label>
+                  <input required name="Title" ng-model="params.meeting_Title">
+                  <div ng-messages="meetingForm.Title.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+
+
+			  <md-datepicker ng-model="params.meeting_Date" class="md-block" md-placeholder="Enter date">
+
+        </md-datepicker>
+
+			   <div class="row" style="text-align:center">
+			    <div class="col col-50">
+				<md-input-container class="md-block">
+                 <label>FromTime</label>
+                 <input type="time" required name="FromTime" ng-model="params.meeting_FromTime">
+                 <div ng-messages="meetingForm.FromTime.$error">
+                    <div ng-message="required">This is required.</div>
+                 </div>
+              </md-input-container>
+				</div>
+
+				 <div class="col col-50">
+				 <md-input-container class="md-block">
+                 <label>ToTime</label>
+                 <input type="time" required name="ToTime" ng-model="params.meeting_ToTime">
+                 <div ng-messages="meetingForm.ToTime.$error">
+                    <div ng-message="required">This is required.</div>
+                 </div>
+              </md-input-container>
+			  </div>
+			  </div>
+
+			   <md-input-container class="md-block">
+                  <label>Agenda</label>
+                  <input md-maxlength="200" required name="Agenda" ng-model="params.Agenda">
+                  <div ng-messages="meetingForm.Agenda.$error">
+                     <div ng-message="required">This is required.</div>
+                     <div ng-message="md-maxlength">The notes has to be less than 300 characters long.</div>
+                  </div>
+               </md-input-container>
+				<md-input-container class="md-block">
+                  <label>Location</label>
+                  <input required name="Location" ng-model="params.meeting_Location">
+                  <div ng-messages="meetingForm.Location.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+
+
+   <label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="text" placeholder="Add employees" ng-model="params.employees">
+	</label>
+	<div class="list">
+
+		<div class="item item-avatar item-icon-left item-icon-right"  href="#" ng-repeat="item in listPref | filter:params.employees">
+
+
+			<img src="{{item.doc.image}}" class="ion icon">
+			<h2 class="list-title">{{ item.doc.name }}</h2>
+			<p>{{item.doc.email}}</p>
+			 <ion-checkbox class="icon no-border"  style="background:none;float:right" ng-change="print()"  ng-model="checkItems[item.id]"></ion-checkbox>
+		</div>
+	</div>
+
+		<button class="button button-calm button-block roundedButtons" value="save" ng-disabled="meetingForm.$invalid" ng-click="add(params)">Save</button>
+
+
+            </form>
+
+         </md-content>
+      </div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,15 @@
+<ion-view title="Our Team ">
+  <ion-content padding="true" class="has-header">
+<div class="list">
+			<div class="item item-avatar item-icon-left item-icon-right"  ng-repeat="item in employees | filter:search" ng-click="callprofile(item)">
+
+				<img src="{{item.image}}" class="ion icon">
+
+				<h2 class="list-title">{{item.name}}</h2>
+				<p>{{item.email}}</p>
+				<i class="icon ion-ios-arrow-right"></i>
+
+			</div>
+		</div>
+  </ion-content>
+</ion-view>

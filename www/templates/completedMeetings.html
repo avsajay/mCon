@@ -1,0 +1,29 @@
+<ion-view title="Meetings" id="page14">
+	<ion-nav-buttons side="right">
+
+	</ion-nav-buttons>
+	<div class="tabs-striped tabs-top tabs-background-calm tabs-color-light">
+		<div class="tabs">
+				<a class="tab-item " href="#/menu-content/upcomingMeetings">
+       Upcoming
+      </a>
+			<a class="tab-item active " href="#/menu-content/completedMeetings">
+      Completed
+      </a>
+
+
+		</div>
+	</div>
+  <ion-content padding="false" class="has-header">
+  <br><br>
+
+      <a class="item item-avatar item-icon-left item-icon-right" ng-repeat="item in completed_Meetings_List" ng-click="call(item)" >
+				<i class="icon ion-calendar"></i>
+
+				<h2 class="list-title text-bolder">{{item.meeting_Title}}</h2>
+				<p style="float: left">{{item.meeting_Date | date :  "MMM d, y"}}</p><p style="float: right">{{diffDays1[$index]}}&nbsp;days ago</p>
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+    </ion-list>
+  </ion-content>
+</ion-view>

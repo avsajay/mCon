@@ -1,0 +1,29 @@
+<ion-view cache-view="false" title="Chat Room">
+  <ion-content  padding="true" class="has-header has-footer">
+    <ol class="chat">
+    <li class="{{x.type}}" ng-repeat="x in records">
+
+        <div class="avatar"><img src={{x.image}} draggable="false"/></div>
+      <div class="msg">
+        <p class="text-bolder">{{x.username}}</p>
+
+        <p>{{x.message}}<emoji class="pizza"/></p>
+        <time>{{x.date| date :  "h:mm a"}}</time>
+      </div>
+    </li>
+
+
+    </ol>
+  </ion-content>
+
+  <div class='chat-div' style="background:#eee;padding:0px;min-height:30px;width:100%;position:fixed;bottom:45px">
+    <div class="row">
+      <div class="col col-80">
+	  <input type="text" placeholder="Type your message here" style="width:100%;padding:10px" ng-model="params.message"></div>
+      <div class="col">
+        <button class="roundedButtons light-blue-button white-text light-border" style="padding:6px;padding-left:10px;padding-right:10px" ng-click="sendMessage(params)">Send</button>
+      </div>
+    </div>
+  </div>
+
+</ion-view>

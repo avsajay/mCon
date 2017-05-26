@@ -1,0 +1,42 @@
+<ion-view cache-view="false" title="Session Notes" id="page23">
+  <ion-content has-header="true">
+    <div id="session" class="text-center">
+      <h3 class="white-text">{{sessionData.session_Title}}</h3>
+      <p> </p>
+    </div>
+    <div class="row-heading move-top">
+      <p class="pull-left"></p>
+      <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Session Details
+        <a href="#/side-menu21/editSessionNotes" >
+            <button class="roundedButtons dark-button white-text dark-border pull-right" style="margin-top:-6px;padding:2px;padding-left:10px;padding-right:10px;font-size:16px" ng-hide="{{mine}}">Edit</button>
+        </a>
+      </h4>
+
+    <div class="item item-icon-left"><i class="icon ion-location"></i><font class="text-bolder">Location</font>
+      <p>{{sessionData.session_Location}}</p>
+    </div>
+
+    <div class="item item-icon-left"><i class="icon ion-person-stalker"></i><font class="text-bolder">Speaker</font>
+      <p>{{sessionData.session_Speaker}}</p>
+    </div>
+
+    <div class="item item-icon-left"><i class="icon ion-bowtie"></i><font class="text-bolder">Designation</font>
+      <p>{{sessionData.session_SpeakerDesignation}}</p>
+    </div>
+  </div>
+
+    <div class="conference-row">
+      <div class="row-heading move-top">
+        <p class="pull-left"></p>
+        <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Session Notes
+          <a href="#/menu-content/editSessionNotes1">
+              <button class="roundedButtons dark-button white-text dark-border pull-right" style="margin-top:-6px;padding:2px;padding-left:10px;padding-right:10px;font-size:16px" ng-hide="{{mine}}" >Edit</button>
+          </a>
+				</h4>
+      </div>
+      <div class="extra-padding container">
+        <p>{{sessionData.notes}}</p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

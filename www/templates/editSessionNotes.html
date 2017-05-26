@@ -1,0 +1,39 @@
+<ion-view title="Edit session">
+<ion-content>
+  <div id="inputContainer" class="inputDemo">
+         <md-content layout-padding>
+		 <br><br>
+            <form name="editSessionForm" ng-submit="submitForm(editSessionForm.$valid)" novalidate>
+<md-input-container class="md-block">
+                  <label>Title</label>
+                  <input name="SessionTitle"  ng-disabled="true" ng-model="sessionData.session_Title">
+
+               </md-input-container>
+
+
+			   <md-input-container class="md-block">
+                  <label>Location</label>
+                  <input  name="Location" ng-model="sessionData.session_Location">
+
+               </md-input-container>
+
+			    <md-input-container class="md-block">
+                  <label>Speaker</label>
+                  <input  name="SessionSpeaker" ng-model="sessionData.session_Speaker">
+
+               </md-input-container>
+
+               <md-input-container class="md-block">
+                       <label>Designation</label>
+                       <input  name="SessionSpeakerDesignation" ng-model="sessionData.session_SpeakerDesignation">
+
+                       </div>
+              </md-input-container>
+
+
+			<button class="button button-calm button-block roundedButtons" value="save" ng-disabled="editSessionForm.$invalid" ng-click="edit(sessionData)">Save</button>
+        </div>
+    </ion-content>
+	</form>
+</ion-content>
+</ion-view>

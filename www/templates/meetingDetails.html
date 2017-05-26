@@ -1,0 +1,76 @@
+<ion-view cache-view="false" title="Meeting Details">
+
+  <ion-content has-header="true">
+
+    <div id="meeting" class="text-center">
+      <h3 class="white-text">{{meetingData.meeting_Title}}</h3>
+      <p class="white-text">{{meetingData.meeting_Date | date :  "MMM d, y"}}</p>
+    </div>
+    <div class="conference-row">
+   <div class="row-heading move-top">
+
+    <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Details
+      <a href="#/menu-content/editMeeting">
+          <button class="roundedButtons dark-button white-text dark-border pull-right" style="margin-top:-6px;padding:2px;padding-left:10px;padding-right:10px;font-size:16px">Edit</button>
+      </a>
+    </h4>
+
+     </div>
+   </div>
+    <div class="item item-icon-left"><i class="icon ion-clock"></i>From Time
+      <p>{{meetingData.meeting_FromTime | date :  "h:mm a"}}</p>
+    </div>
+    <div class="item item-icon-left"><i class="icon ion-clock"></i>To Time
+      <p>{{meetingData.meeting_ToTime | date :  "h:mm a"}}</p>
+    </div>
+
+    <div class="item item-icon-left"><i class="icon ion-clipboard"></i>Agenda
+      <p>{{meetingData.Agenda}}</p>
+    </div>
+    <div class="item item-icon-left"><i class="icon ion-location"></i>Location
+      <p>{{meetingData.meeting_Location}}</p>
+    </div>
+    <div class="conference-row">
+   <div class="row-heading move-top">
+
+    <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Employees
+      <a href="#/menu-content/editemployee">
+          <button class="roundedButtons dark-button white-text dark-border pull-right" style="margin-top:-6px;padding:2px;padding-left:10px;padding-right:10px;font-size:16px">Edit</button>
+      </a>
+    </h4>
+
+     </div>
+   </div>
+
+      <div ng-repeat="item in meetingData.employees">
+      <div class="item item-icon-left" ><i class="icon ion-person"></i>
+	  <p>{{item}}</p>
+    </div>
+	</div>
+
+
+
+    <div class="meeting-row">
+      <div class="conference-row">
+     <div class="row-heading move-top">
+
+      <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Meeting Notes
+        <a href="#/menu-content/addMeetingNotes" ng-hide="{{meetingData.meeting_notes?1:0}}">
+            <button class="roundedButtons dark-button white-text dark-border pull-right" style="margin-top:-6px;padding:2px;padding-left:10px;padding-right:10px;font-size:16px">Add</button>
+        </a>
+		 <a href="#/menu-content/editMeetingNotes" ng-show="{{meetingData.meeting_notes?1:0}}">
+            <button class="roundedButtons dark-button white-text dark-border pull-right" style="margin-top:-6px;padding:2px;padding-left:10px;padding-right:10px;font-size:16px">Edit</button>
+        </a>
+      </h4>
+
+       </div>
+     </div>
+      <div class="extra-padding container">
+        <p>{{meetingData.meeting_notes}}</p>
+
+      </div>
+    </div>
+
+
+</ion-content>
+</ion-view>

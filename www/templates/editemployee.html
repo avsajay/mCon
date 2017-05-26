@@ -1,0 +1,32 @@
+<ion-view cache-view="false" view-title="edit Employees">
+<ion-nav-buttons side="right">
+     <!--a class="button white-text" id="headerButton"  ng-click="save(meetingData)">
+        Save <i class="icon ion-chevron-right"></i>
+    </a-->
+    </ion-nav-buttons>
+  <ion-content >
+ <form name="editemployeeForm" ng-submit="submitForm(editemployeeForm.$valid)" novalidate>
+	<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="text" placeholder="Search" ng-model="search">
+	</label>
+
+	<div class="list">
+
+		<div class="item item-avatar item-icon-left item-icon-right" href="#" ng-repeat="item in listPref | filter:search">
+
+			<img src="{{item.doc.image}}" class="ion icon">
+			<h2 class="list-title">{{ item.doc.name }}</h2>
+			<p>{{item.doc.email}}</p>
+			 <ion-checkbox class="icon no-border"  ng-change="print()"  ng-model="checkItems[item.id]"></ion-checkbox>
+		</div>
+	</div>
+	<div layout-padding>
+	<button class="button button-calm layout-padding button-block  roundedButtons" value="save" ng-disabled="editemployeeForm.$invalid" ng-click="save(meetingData)">Save</button>
+
+	   </div>
+		   </form>
+
+  </ion-content>
+
+</ion-view>

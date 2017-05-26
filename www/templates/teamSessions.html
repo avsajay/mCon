@@ -1,0 +1,42 @@
+<ion-view title="Sessions" id="page20">
+<div class="tabs-striped tabs-top tabs-background-calm tabs-color-light">
+		<div class="tabs">
+			<a class="tab-item " href="#/menu-content/mySessions">
+        Mine
+      </a>
+			<a class="tab-item active" href="#/menu-content/teamSessions">
+       Team
+      </a>
+
+		</div>
+	</div>
+
+ <ion-content padding="false" class="has-header">
+ <br><br>
+
+
+
+
+	   <ion-list id="session_list" class="list" style="padding:0px;margin:0pxs">
+
+
+      <a class="item item-avatar item-icon-left item-icon-right" ng-repeat="item in sessions_list" ng-click="call(item)" >
+        <div class="icon" style="background:#00abe5;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 13px;
+    font-size: 20px;
+    padding-top: 10px;
+    color: #fff;
+    margin-top: 15px;
+    font-weight: bold;text-align:center">{{item.session_Title.charAt(0) }}</div>
+
+				<h2 class="list-title text-bolder">{{item.session_Title }}</h2>
+				<p>created by{{item.username}}</p>
+			<i class="icon ion-ios-arrow-right"></i>
+			</a>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

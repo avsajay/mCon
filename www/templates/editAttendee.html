@@ -1,0 +1,85 @@
+<ion-view title="Edit attendee">
+<ion-header-bar align-title="left" class="bar-calm">
+<a href="#/attendee" class="button button-icon icon icon ion-arrow-left-c"></a>
+ <h1 class="title"><center>Edit Attendee</h1>
+
+ </ion-header-bar>
+  <div style="margin: 0px; line-height: 150px; background:url('{{profileData.image}}'); text-align: center;">
+      <label class="choose_file">
+         <span>Capture Business card</span>
+         <input name="Select File" type="file" id="inputFileToLoad"/>
+
+
+     </label>
+
+    </div>
+	<ion-content style="height: 500px">
+<div id="inputContainer" class="inputDemo">
+         <md-content layout-padding>
+		 <br><br>
+            <form name="editattendeeForm" ng-submit="submitForm(editattendeeForm.$valid)" novalidate>
+
+			   <md-input-container class="md-block">
+                  <label>Name</label>
+                  <input  name="Name"  ng-model="profileData.attendee_Name">
+
+                  <div ng-messages="editattendeeForm.Name.$error">
+
+                  </div>
+               </md-input-container>
+               <md-input-container class="md-block">
+                  <label>Email</label>
+                  <input  name="Email" ng-model="profileData.attendee_Email"
+                     ng-pattern="/^.+@.+\..+$/" />
+                  <div ng-messages="editattendeeForm.Email.$error" role="alert">
+                     <div ng-message="pattern">
+                      Enter a valid email address.
+                     </div>
+
+                  </div>
+               </md-input-container>
+               <md-input-container class="md-block">
+                       <label>PhoneNumber</label>
+                       <input type="tel" name="PhoneNumber" ng-model="params.attendee_PhoneNumber" ng-pattern="/^[0-9]{10}$/" required>
+                       <div ng-messages="attendeeForm.PhoneNumber.$error">
+                                            <div ng-message="pattern">
+                                             Enter a valid Phone Number.
+                                            </div>
+                                          
+                                         </div>
+                    </md-input-container>
+				<md-input-container class="md-block">
+                  <label>Designation</label>
+                  <input name="Designation" ng-model="profileData.attendee_Designation">
+
+               </md-input-container>
+			   <md-input-container class="md-block">
+                  <label>Company</label>
+                  <input name="Company" ng-model="profileData.attendee_Company">
+
+               </md-input-container>
+			   <md-input-container class="md-block">
+        <label>Attendee Type</label>
+        <md-select ng-model="profileData.type">
+          <md-optgroup label="Type">
+            <md-option ng-value="$index" ng-repeat="item in items" ng-selected="{{item.checked}}">
+			{{item.name}}
+			</md-option>
+          </md-optgroup>
+        </md-select>
+      </md-input-container>
+			   <md-input-container class="md-block">
+                  <label>Comments</label>
+                  <input md-maxlength="300"  name="Comments" ng-model="profileData.comments">
+                  <div ng-messages="editattendeeForm.comments.$error">
+
+                     <div ng-message="md-maxlength">put the comments</div>
+                  </div>
+               </md-input-container>
+
+               <button class="button button-calm button-block roundedButtons" value="save" ng-disabled="editattendeeForm.$invalid" ng-click="edit(profileData)">Save</button>
+            </form>
+         </md-content>
+      </div>
+</ion-content>
+</ion-view>

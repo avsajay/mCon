@@ -1,0 +1,801 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+  font-family: 'Roboto' !important;
+}
+.bar-footer {
+  background: #232527;
+  color: #fff !important;
+}
+
+.container{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.visting-card-icon:before{
+  font-size: 7em;
+}
+
+.ion-ios-plus-outline{
+  margin-right:5px
+}
+
+.background-transparent{
+  background: transparent
+}
+
+.no-border{
+  border:0px;
+}
+
+.pull-right{
+  margin-left:auto;
+}
+
+.pull-left{
+  margin-right:auto;
+}
+
+.extra-left-padding{
+    padding-left:40px;
+}
+
+.extra-right-padding{
+    padding-right: 40px;
+}
+
+.shift-left{
+  margin-left:-15px;
+}
+
+.full-width{
+  width:100%
+}
+
+
+.roundedButtons{
+  border-radius: 50px
+}
+.light-blue-button{
+  background: #00aae7
+}
+.dark-button{
+  background: #232527
+}
+
+/** border configuration **/
+
+.dark-border {
+  border: 0.5px solid #232527
+}
+
+
+/** text configuration **/
+.white-text {
+  color: #fff !important;
+}
+
+.dark-text {
+  color: #232527
+}
+
+.light-blue-text {
+  color: #00aae7
+}
+
+.dark-blue-text {
+  color: #23680
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-bolder {
+  font-weight: bolder;
+}
+
+/** dashboard configuration **/
+
+#welcomeScreen {
+  background: #232527;
+  background-image: url('../img/banner16.png');
+  padding: 60px;
+}
+
+#welcomeScreen h2 {
+  font-size: 25px;
+  color: #fff !important;
+}
+#contact {
+
+  background-image: url('../img/contact1.jpg');
+  padding: 90px;
+}
+#blue {
+
+  background-image: url('../img/blue.png');
+  padding: 120px;
+}
+
+
+
+/** circled icons configuration **/
+
+.icon-circle, .icon-circle-large, .icon-circle-small {
+  position: relative;
+  display: inline-block;
+  margin: 0px;
+  padding: 5px;
+  width: 45px;
+  height: 45px;
+  font-size: 30px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 100%;
+  border: 1px solid #ebebeb;
+  background: rgb(0, 161, 225);
+  color: #fff;
+  text-align: center;
+  /* vertical-align: middle; */
+}
+
+.icon-circle-large {
+  width: 100px;
+  height: 100px;
+  font-size: 64px;
+  /* 64, originally 60 */
+  padding: 16px;
+}
+
+.icon-circle-small {
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+}
+
+
+/*.icon-circle i, .icon-circle-small i, .icon-circle-large i { vertical-align: middle; }*/
+
+.icon-circle-outline {
+  border: 1px solid rgb(0, 161, 225);
+  background: transparent;
+  color: rgb(0, 161, 225);
+  /*color: #8a6de9;*/
+}
+
+.icon-circle-outline i {}
+
+
+/*icon-circle-bg and icon-circle and circle-bg*/
+
+
+/*http://davidwalsh.name/css-circles*/
+
+.item-icon-circle {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  /* width and height can be anything, as long as they're equal */
+  text-align: center;
+  color: white;
+  /* font size here wont work */
+}
+
+a {
+  text-decoration: none;
+}
+
+.dashboardItem{
+  margin-top:10px
+}
+
+
+/** login page configuration **/
+.loginBackground {
+  background: url('../img/home_background.png');
+  width: 100% !important;
+  height: 100% !important
+}
+
+.login-logo {
+  width: 150px;
+}
+
+.rounded-transparent-input{
+  border-radius: 30px;
+  background: transparent;
+  border: 2px solid #fff;
+  color:#fff;
+}
+
+.form-errors{
+	margin:5px 0;
+}
+.form-error {
+  padding: 2px 0 2px 16px;
+  color: #ef4048;
+  text-align: left
+}
+
+form label{
+  color:black;
+}
+
+md-input-container input {
+  border:1px solid black;
+}
+
+label.item.has-error-lr {
+  border-left: 2px solid #ef4048;
+  border-right: 2px solid #ef4048;
+  border-top: 2px solid #ef4048;
+  border-bottom: 2px solid #ef4048;
+}
+
+label.item.valid-lr {
+  border: 2px solid #fff;
+
+}
+.dark-background{
+	background-color: #23680 !important;
+}
+
+.image-modal {
+    width: 100%!important;
+    height: 100%;
+
+}
+
+.text-center{
+  text-align: center;
+}
+.text-big{
+  font-size:16px
+}
+
+/*css for attendee profile*/
+#profile-bg {
+        position: fixed;
+        left: 0;
+        top: 0px;
+        width: 100%;
+        height: 150px;
+
+        background-size: 100%;
+        background-position: 50% 20%;
+
+        /*text-align: center;*/
+      }
+
+      #content {
+        position: relative;
+        margin-top: -10px;
+        background-color: #00BFFF;
+        box-shadow: 0px -1px 10px rgba(0,0,0,0.4);
+        padding-top: 200px;
+		padding-bottom: 50px;
+    /*width:100%;*/
+
+      }
+
+      #profile-info {
+        position: absolute;
+        top: -95px;
+        width: 100%;
+        z-index: 2;
+        text-align: center;
+      }
+      #profile-name {
+        color: #FFFFFF;
+        font-size: 20px;
+      }
+      #profile-description {
+        font-size: 15px;
+        color: 	#FFFFFF;
+      }
+
+
+      #profile-image {
+        display: block;
+        border-radius: 100px;
+        border: 1px solid #fff;
+        width: 128px;
+        height: 128px;
+        margin: 120px auto 0;
+        box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
+      }
+/*for profile*/
+.row-heading{
+	width:100%;
+	background:#eee;
+	padding-top: 1px;
+  padding-bottom:2px;
+}
+.row-heading1{
+	width:100%;
+	background:#00bfff;
+	padding-top: 1px;
+  padding-bottom:2px;
+  text-align:center;
+}
+.extra-padding{
+	padding:6px;
+}
+.pull-right{
+	float:right;
+}
+.pull-left{
+	float:left;
+
+}
+.icon1 {
+   font-size: 20px;
+   	color: #00BFFF;
+}
+.icon2 {
+ font-size: 25px;
+   	color:#ffffff;
+}
+
+.right-icon{
+  font-size:20px;
+  margin-top:5px;
+  padding-right:10px
+}
+
+/*logistics*/
+.logistics {
+  background: url('../img/logistics1.jpg');
+  width: 100% !important;
+  height: 100% !important
+}
+
+/*file upload*/
+.choose_file{
+    position:relative;
+    display:inline-block;
+	border-radius:8px;
+    padding: 40px;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 2px;
+	background:none;
+}
+.choose_file input[type="file"]{
+    -webkit-appearance:none;
+    position:absolute;
+    top:0; left:0;
+    opacity:0;
+}
+
+
+/** chat window configuration **/
+.chat {
+    list-style: none;
+    background: none;
+    margin: 0;
+    padding: 0 0 50px 0;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+.chat li {
+    padding: 0.5rem;
+    overflow: hidden;
+    display: flex;
+}
+.chat .avatar {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: block;
+    z-index: 2;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+
+}
+.chat .avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    background-color: rgba(255,255,255,0.9);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.chat .day {
+    position: relative;
+    display: block;
+    text-align: center;
+    color: #c0c0c0;
+    height: 20px;
+    text-shadow: 7px 0px 0px #e5e5e5, 6px 0px 0px #e5e5e5, 5px 0px 0px #e5e5e5, 4px 0px 0px #e5e5e5, 3px 0px 0px #e5e5e5, 2px 0px 0px #e5e5e5, 1px 0px 0px #e5e5e5, 1px 0px 0px #e5e5e5, 0px 0px 0px #e5e5e5, -1px 0px 0px #e5e5e5, -2px 0px 0px #e5e5e5, -3px 0px 0px #e5e5e5, -4px 0px 0px #e5e5e5, -5px 0px 0px #e5e5e5, -6px 0px 0px #e5e5e5, -7px 0px 0px #e5e5e5;
+    box-shadow: inset 20px 0px 0px #e5e5e5, inset -20px 0px 0px #e5e5e5, inset 0px -2px 0px #d7d7d7;
+    line-height: 38px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.other .msg {
+    background: #eee;
+    color:#fff !important;
+    order: 1;
+    border-top-left-radius: 0px;
+    box-shadow: -1px 2px 0px #D4D4D4;
+}
+.other:before {
+    content: "";
+    position: relative;
+    top: 0px;
+    right: 0px;
+    left: 50px;
+    width: 0px;
+    height: 0px;
+    border: 5px solid #fff;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.self {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.self .msg {
+    background: #00aae7;
+    color:#fff;
+    order: 1;
+    border-bottom-right-radius: 0px;
+    box-shadow: 1px 2px 0px #D4D4D4;
+}
+.self .avatar {
+    order: 2;
+    margin-left: 10px
+}
+.self .avatar:after {
+    content: "";
+    position: relative;
+    display: inline-block;
+    bottom: 19px;
+    right: 10px;
+    width: 0px;
+    height: 0px;
+    border: 5px solid #00aae7;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    box-shadow: 0px 2px 0px #00aae7;
+
+
+}
+
+.msg {
+    background: white;
+    min-width: 180px;
+    padding: 10px;
+    margin-left:10px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.07);
+}
+.msg p {
+    font-size: 0.8rem;
+    margin: 0 0 0.2rem 0;
+    color: #777;
+}
+.self .msg p{
+  color:#fff;
+}
+.msg img {
+    position: relative;
+    display: block;
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #eee;
+    transition: all .4s cubic-bezier(0.565, -0.260, 0.255, 1.410);
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+@media screen and (max-width: 800px) {
+    .msg img {
+    width: 300px;
+}
+}
+@media screen and (max-width: 550px) {
+    .msg img {
+    width: 200px;
+}
+}
+
+.msg time {
+    font-size: 0.7rem;
+    font-weight:bolder;
+    color: #ccc;
+    margin-top: 3px;
+    float: right;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.msg time:before{
+    content:"\f017";
+    color: #ddd;
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.typewriter p{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+.padding{
+  padding: 0px
+}
+
+.light-border{
+  border:1px solid #00aae7
+}
+
+/*file upload*/
+.choose_file{
+    position:relative;
+    display:inline-block;
+	  border-radius:8px;
+    border:#ebebeb solid 0px;
+    width:250px;
+    padding: 4px 6px 4px 8px;
+    font: normal 14px Myriad Pro, Verdana, Geneva, sans-serif;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 2px;
+	background:none
+}
+.choose_file input[type="file"]{
+    -webkit-appearance:none;
+    position:absolute;
+    top:0; left:0;
+    opacity:0;
+}
+
+#session{
+  background: #232527;
+  background-image: url('../img/session.jpg');
+  padding: 50px;
+  padding-bottom: 50px;
+}
+#meeting{
+  background: #232527;
+  background-image: url('../img/conference_background.png');
+  padding: 50px;
+   padding-bottom: 50px;
+}
+
+ .thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+  }
+
+  .numberCircle {
+      border-radius: 50%;
+      behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+      width: 36px;
+      height: 36px;
+      padding: 8px;
+
+      background: #fff;
+      border: 2px solid #666;
+      color: #666;
+      text-align: center;
+
+      font: 32px Arial, sans-serif;
+  }
+
+.checked{
+    background-color:red;
+	color:#fff !important
+  }
+.list-title {
+  color: #232527;
+  font-weight: bolder;
+}
+.checkbox {
+  margin-left: 80px;
+  color: #bababa
+}
+/* css for preloader*/
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #00aae7;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 5;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin:auto;
+  margin-top:50%;
+  box-shadow: inset 0px 0px 0px #00aae7;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #00aae7;
+  }
+}
+@-webkit-keyframes rotate2 {
+		0% {
+			-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+			border-top-color: rgba(0, 0, 0, 0.5);
+		}
+		50% {
+			-webkit-transform: rotate(180deg);
+					transform: rotate(180deg);
+			border-top-color: rgba(0, 0, 255, 0.5);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+			border-top-color: rgba(0, 0, 0, 0.5);
+		}
+		}
+
+		@keyframes rotate2 {
+		0% {
+			-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+			border-top-color: #fff;
+		}
+		50% {
+			-webkit-transform: rotate(180deg);
+					transform: rotate(180deg);
+			border-top-color: #fff;
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+			border-top-color: #fff;
+		}
+		}
+		* {
+		box-sizing: border-box;
+		}
+
+		body {
+		background: #f9f9f9;
+		padding-bottom: 100px;
+		}
+
+		h1,
+		h3 {
+		display: block;
+		margin: 0px auto;
+		text-align: center;
+
+		}
+
+		h1 {
+		margin: 50px auto;
+		}
+
+		.loader1,
+		.loader2,
+		.loader3,
+		.loader4 {
+		position: relative;
+		margin: 75px auto;
+		width: 150px;
+		height: 150px;
+		display: block;
+		overflow: hidden;
+		}
+
+		.loader1 div,
+		.loader2 div,
+		.loader3 div,
+		.loader4 div {
+		height: 100%;
+		}
+
+		/* loader 4 */
+		.loader4,
+		.loader4 div {
+		border-radius: 50%;
+		padding: 8px;
+		border: 2px solid transparent;
+		-webkit-animation: rotate linear 3.5s infinite;
+				animation: rotate linear 3.5s infinite;
+		border-radius: 50%;
+		padding: 4px;
+		-webkit-animation: rotate2 4s infinite linear;
+				animation: rotate2 4s infinite linear;
+		background: none;
+		}
+body
+{
+	background:#232527
+}
+.show
+{
+	display:block
+}
+.hide
+{
+	display:none
+}
+
+#logistics h4 {
+  font-size: 20px;
+  color: #fff !important;
+}
+.md-datepicker-input-container{
+  margin-left: -10px !important;
+}

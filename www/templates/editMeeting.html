@@ -1,0 +1,66 @@
+<ion-view cache-view="false" view-title="Edit Meeting">
+  <ion-nav-buttons side="right">
+
+  </ion-nav-buttons>
+
+<ion-view cache-view="false" view-title="Edit Meeting">
+  <ion-nav-buttons side="right">
+
+  </ion-nav-buttons>
+
+  <ion-content >
+ <div id="inputContainer" class="inputDemo">
+         <md-content layout-padding>
+		 <br><br>
+            <form name="meetingForm" ng-submit="submitForm(meetingForm.$valid)" novalidate>
+
+               <md-input-container class="md-block">
+                  <label>Title</label>
+                  <input name="Title" ng-disabled="true" ng-model="meetingData.meeting_Title">
+
+               </md-input-container>
+
+			          <md-input-container class="md-block">
+                  <label>Date</label>
+                  <input type="date"  name="Date" ng-model="meetingData.meeting_Date">
+
+               </md-input-container>
+
+	<md-input-container class="md-block">
+                 <label>FromTime</label>
+                 <input type="time" name="FromTime" ng-model="meetingData.meeting_FromTime">
+
+              </md-input-container>
+
+<md-input-container class="md-block">
+                 <label>ToTime</label>
+                 <input type="time" name="ToTime" ng-model="meetingData.meeting_ToTime">
+
+              </md-input-container>
+
+
+			   <md-input-container class="md-block">
+                  <label>Agenda</label>
+                  <input md-maxlength="200"  name="Agenda" ng-model="meetingData.Agenda">
+                  <div ng-messages="meetingForm.Agenda.$error">
+
+                     <div ng-message="md-maxlength">The notes has to be less than 300 characters long.</div>
+                  </div>
+               </md-input-container>
+				<md-input-container class="md-block">
+                  <label>Location</label>
+                  <input  name="Location" ng-model="meetingData.meeting_Location">
+                  <div ng-messages="meetingForm.Location.$error">
+
+                  </div>
+               </md-input-container>
+
+		<button class="button button-calm button-block roundedButtons" value="save" ng-disabled="meetingForm.$invalid" ng-click="edit(meetingData)">save</button>
+
+
+            </form>
+         </md-content>
+
+      </div>
+    </ion-content>
+</ion-view>

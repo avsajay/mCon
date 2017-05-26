@@ -1,0 +1,65 @@
+<ion-view cache-view="false" title="Add Conference">
+  <ion-content padding="true" class="has-header">
+
+		<div id="inputContainer" class="inputDemo">
+         <md-content layout-padding>
+
+            <form name="addConferenceForm" ng-submit="submitForm(addConferenceForm.$valid)" novalidate>
+
+
+			   <md-input-container class="md-block">
+                  <label>Name</label>
+                  <input required name="ConferenceName" ng-model="params.conference_Name">
+                  <div ng-messages="addConferenceForm.ConferenceName.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+			   <md-input-container class="md-block">
+                  <label>Location</label>
+                  <input  name="Location" ng-model="params.conference_Location">
+                  <div ng-messages="addConferenceForm.Location.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+
+			    <div class="row">
+			    <div class="col col-50" style="margin-left: -25px;">
+			  <md-datepicker ng-model="params.conference_FromDate" md-placeholder="From date"></md-datepicker>
+      </div>
+	  <div class="col col-50" style="margin-left: -10px;">
+			  <md-datepicker ng-model="params.conference_ToDate" md-placeholder="To date"></md-datepicker>
+      </div>
+	  </div>
+				 <md-input-container class="md-block">
+                  <label>Description</label>
+                  <input md-maxlength="200" required name="Description" ng-model="params.conference_Description">
+                  <div ng-messages="addConferenceForm.Description.$error">
+                     <div ng-message="required">This is required.</div>
+                     <div ng-message="md-maxlength">The notes has to be less than 300 characters long.</div>
+                  </div>
+               </md-input-container>
+
+			   <md-input-container class="md-block">
+                  <label>Speakers</label>
+                  <input md-maxlength="200" required name="Speakers" ng-model="params.conference_Speakers">
+                  <div ng-messages="addConferenceForm.Speakers.$error">
+                     <div ng-message="required">This is required.</div>
+                     <div ng-message="md-maxlength">The notes has to be less than 300 characters long.</div>
+                  </div>
+               </md-input-container>
+			   <md-input-container class="md-block">
+                  <label>Agenda</label>
+                  <input md-maxlength="200" required name="Agenda" ng-model="params.conference_Agenda">
+                  <div ng-messages="addConferenceForm.Agenda.$error">
+                     <div ng-message="required">This is required.</div>
+                     <div ng-message="md-maxlength">The notes has to be less than 300 characters long.</div>
+                  </div>
+               </md-input-container>
+
+<button class="button button-calm button-block roundedButtons" value="save" ng-disabled="addConferenceForm.$invalid" ng-click="add(params)">Save</button>
+
+            </form>
+         </md-content>
+      </div>
+  </ion-content>
+</ion-view>

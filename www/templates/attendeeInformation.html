@@ -1,0 +1,63 @@
+<ion-view title="Attendee Information">
+  <ion-content>
+	 <div id="inputContainer" class="inputDemo">
+         <md-content layout-padding>
+		 <br><br>
+            <form name="attendeeForm">
+               <md-input-container class="md-block">
+                  <label>Name</label>
+                  <input required name="Name" ng-model="attendee_Name">
+                  <div ng-messages="attendeeForm.Name.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+               <md-input-container class="md-block">
+                  <label>Email</label>
+                  <input required name="Email" ng-model="attendee_Email"
+                     ng-pattern="/^.+@.+\..+$/" />
+                  <div ng-messages="attendeeForm.Email.$error" role="alert">
+                     <div ng-message="pattern">
+                      Enter a valid email address.
+                     </div>
+					  <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+			    <md-input-container class="md-block">
+                  <label>PhoneNumber</label>
+                  <input required name="PhoneNumber" ng-model="attendee_PhoneNumber"  ng-pattern="/^[0-9]{1,7}$/">
+                  <div ng-messages="attendeeForm.PhoneNumber.$error">
+					 <div ng-message="pattern">
+                      Enter a valid Phone Number.
+                     </div>
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+				<md-input-container class="md-block">
+                  <label>Designation</label>
+                  <input required name="Designation" ng-model="attendee_Designation">
+                  <div ng-messages="attendeeForm.Designation.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+			   <md-input-container class="md-block">
+                  <label>Company</label>
+                  <input required name="Company" ng-model="attendee_Company">
+                  <div ng-messages="attendeeForm.Company.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+
+               <md-input-container class="md-block">
+                  <label>Notes</label>
+                  <input md-maxlength="500" required name="Notes" ng-model="attendee_comments">
+                  <div ng-messages="attendeeForm.Notes.$error">
+                     <div ng-message="required">This is required.</div>
+                     <div ng-message="md-maxlength">The notes has to be less than 500 characters long.</div>
+                  </div>
+               </md-input-container>
+<button class="button button-calm  button-block" value="save">save</button>
+            </form>
+         </md-content>
+      </div>
+    </ion-content>
+</ion-view>

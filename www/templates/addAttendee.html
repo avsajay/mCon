@@ -1,0 +1,82 @@
+<ion-view cache-view="false" title="Add Attendee">
+  <ion-content padding="true" class="has-header">
+    <div style="margin: 0px; line-height: 150px; background:url('img/upload_image.png'); text-align: center;">
+      <label class="choose_file">
+         <span>Capture Business card</span>
+         <input name="Select File" type="file" id="inputFileToLoad"/>
+
+
+     </label>
+
+    </div>
+
+   <div id="inputContainer" class="inputDemo">
+         <md-content layout-padding>
+
+            <form name="attendeeForm" ng-submit="submitForm(attendeeForm.$valid)" novalidate>
+               <md-input-container class="md-block">
+                  <label>Name</label>
+                  <input required name="Name" ng-model="params.attendee_Name">
+                  <div ng-messages="attendeeForm.Name.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+               <md-input-container class="md-block">
+                  <label>Email</label>
+                  <input required name="Email" ng-model="params.attendee_Email"
+                     ng-pattern="/^.+@.+\..+$/" />
+                  <div ng-messages="attendeeForm.Email.$error" role="alert">
+                     <div ng-message="pattern">
+                      Enter a valid email address.
+                     </div>
+					  <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+               <md-input-container class="md-block">
+                        <label>PhoneNumber</label>
+                        <input required type="tel" name="PhoneNumber" ng-model="params.attendee_PhoneNumber" ng-pattern="/^[0-9]{10}$/" required>
+                        <div ng-messages="attendeeForm.PhoneNumber.$error">
+                                             <div ng-message="pattern">
+                                              Enter a valid Phone Number.
+                                             </div>
+                                             <div ng-message="required">This is required.</div>
+                                          </div>
+                     </md-input-container>
+				<md-input-container class="md-block">
+                  <label>Designation</label>
+                  <input required name="Designation" ng-model="params.attendee_Designation">
+                  <div ng-messages="attendeeForm.Designation.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+			   <md-input-container class="md-block">
+                  <label>Company</label>
+                  <input required name="Company" ng-model="params.attendee_Company">
+                  <div ng-messages="attendeeForm.Company.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+
+				<md-input-container class="md-block">
+        <label>Attendee Type</label>
+        <md-select ng-model=params.selectedItem>
+          <md-optgroup label="Type">
+            <md-option ng-value="$index" ng-repeat="item in items">{{item.name}}</md-option>
+
+          </md-optgroup>
+        </md-select>
+      </md-input-container>
+			   <md-input-container class="md-block">
+                  <label>Comments</label>
+                  <input md-maxlength="300" name="Comments" ng-model="params.comments">
+                  <div ng-messages="attendeeForm.comments.$error">
+                     <div ng-message="required">This is required.</div>
+                     <div ng-message="md-maxlength">put the comments</div>
+                  </div>
+               </md-input-container>
+			<a class="button button-calm button-block roundedButtons" value="save" type="submit" ng-disabled="attendeeForm.$invalid" ng-click="demo(params)">Save</a>
+            </form>
+         </md-content>
+      </div>
+  </ion-content>
+</ion-view>

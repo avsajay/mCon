@@ -1,0 +1,46 @@
+<ion-view cache-view="false" title="Add Session Details">
+  <ion-content padding="true" class="has-header">
+
+		<div id="inputContainer" class="inputDemo">
+         <md-content layout-padding>
+
+            <form name="sessionNotesForm" ng-submit="submitForm(sessionNotesForm.$valid)" novalidate>
+
+
+			   <md-input-container class="md-block">
+                  <label>Title</label>
+                  <input required name="SessionTitle" ng-model="params.session_Title">
+                  <div ng-messages="sessionNotesForm.SessionTitle.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+			   <md-input-container class="md-block">
+                  <label>Location</label>
+                  <input  name="Location" ng-model="params.session_Location">
+                  <div ng-messages="sessionNotesForm.Location.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+
+			    <md-input-container class="md-block">
+                  <label>Speaker</label>
+                  <input  name="SessionSpeaker" ng-model="params.session_Speaker">
+                  <div ng-messages="sessionNotesForm.SessionSpeaker.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+
+               <md-input-container class="md-block">
+                       <label>Designation</label>
+                       <input  name="SessionSpeakerDesignation" ng-model="params.session_SpeakerDesignation">
+
+                       </div>
+              </md-input-container>
+
+<button class="button button-calm button-block roundedButtons" value="save" ng-disabled="sessionNotesForm.$invalid" ng-click="add(params)">Save</button>
+
+            </form>
+         </md-content>
+      </div>
+  </ion-content>
+</ion-view>

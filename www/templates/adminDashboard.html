@@ -1,0 +1,74 @@
+<ion-view cache-view="false">
+ <ion-nav-title>{{conferenceData1.conference_Name}}</ion-nav-title>
+ <ion-nav-buttons side="right">
+
+<i class="icon2 ion-trash-b" ng-click="delete()"></i>
+
+</ion-nav-buttons>
+  <ion-content padding="false" class="has-header" style="background:{{body}}">
+    <div id="loading" class="{{loadingClass}}">
+  <div class='loader4'>
+   <div>
+     <div>
+       <div>
+         <div>
+           <div>
+             <div>
+               <div>
+                 <div>
+                   <div>
+                     <div></div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+  </div>
+  <div style="text-align:center;color:#fff;font-weight:normal"><p>Please wait while we sync data</p></div>
+  </div>
+  <div id="success" class="{{successClass}}">
+  <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+  <br>
+  <h4 style="text-align:center;color:#fff">Successfully Synced</h4>
+  </div>
+    <div style="display:{{dataClass}}">
+    <div id="welcomeScreen" class="item item-text-wrap text-center">
+      <h2>{{conferenceData1.conference_Location}}</h2><br>
+      <p class="white-text"><i class="icon ion-calendar"></i>&nbsp; {{conferenceData1.conference_FromDate | date :  "MMM d, y"}} &nbsp;-&nbsp;<i class="icon ion-calendar"></i>&nbsp;{{conferenceData1.conference_ToDate | date :  "MMM d, y"}}</p>
+    </div>
+    <div class="item item-text-wrap text-center">
+      <h2 class="text-bold">Categories</h2>
+    </div>
+    <div class="item item-text-wrap text-center">
+      <div class="row">
+        <div class="col col-30">
+          <a class="icon-circle" href="#/menu-content/viewConference">
+            <i class="icon ion-document-text"></i>
+          </a>
+          <p class="dashboardItem"><a href="#/menu-content/viewConference" class="dark-text">ConferenceDetails
+		  </a></p>
+        </div>
+
+        <div class="col col-30">
+          <a class="icon-circle" href="#/menu-content/logistics">
+            <i class="icon ion-clipboard"></i>
+          </a>
+          <p class="dashboardItem"><a href="#/menu-content/logistics" class="dark-text">Logistics</a></p>
+        </div>
+        <div class="col col-30">
+          <a class="icon-circle" href="#/menu-content/view_employees">
+            <i class="icon ion-ios-people"></i>
+          </a>
+          <p class="dashboardItem"><a href="#/menu-content/view_employees" class='dark-text'>Employees</a></p>
+        </div>
+      </div>
+
+      <br>
+    </div>
+  </div>
+  </ion-content>
+</ion-view>

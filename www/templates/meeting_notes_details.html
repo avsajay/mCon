@@ -1,0 +1,26 @@
+
+<ion-view title="Meeting Notes">
+  <ion-content padding="true" class="has-header">
+  <div id="meeting" class="text-center">
+      <h2 class="white-text">{{meeting_notes_details.conference_name}}</h2>
+      <h4 class="white-text">{{meeting_notes_details.meeting_Title}}</h4>
+    </div>
+
+ 
+ <div class="row-heading move-top">
+        <p class="pull-left"></p>
+        <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">By</h4>
+      </div>
+<div>
+<p style="font-style:italic">{{meeting_notes_details.username}}</p>
+</div>
+   <div class="row-heading move-top">
+        <p class="pull-left"></p>
+        <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Notes</h4>
+      </div>
+<div>
+<p>{{meeting_notes_details.notes}}</p>
+ </div>  
+  </ion-content>
+  
+  </ion-view>

@@ -1,0 +1,51 @@
+<ion-view cache-view="false" title="Attendee Information" id="page19">
+  <ion-content has-header="true">
+    <div style="margin: 0px; line-height: 90px; background:url('img/upload_image.png'); text-align: center;">
+	  <label class="choose_file">
+          <i class="icon ion-card visting-card-icon" ng-hide="{{profileData.image?1:0}}"></i>
+		  <img src="{{profileData.image}}" style="width:250px;height:80px" ng-show="{{profileData.image?true:false}}">
+           <span><h3 id="profile-name">{{profileData.attendee_Name}}</h3></b></span>
+			<span><h4 id="profile-name">{{profileData.attendee_Company}}</h4></span>
+       </label>
+    </div>
+
+
+    <div class="conference-row">
+      <div class="row-heading move-top">
+
+        <h4 class="text-light-blue extra-padding container extra-padding light-blue-text">Details
+      <a href="#/menu-content/editAttendee">
+          <button class="roundedButtons dark-button white-text dark-border pull-right" style="margin-top:-6px;padding:2px;padding-left:10px;padding-right:10px;font-size:16px">Edit</button>
+      </a>
+    </h4>
+
+      </div>
+      <div style="margin-top:-10px">
+        <div class="item item-icon-left"><i class="icon ion-person" style="font-size:30px;"></i><font class="text-bolder">Name</font>
+          <p>{{profileData.attendee_Name}}</p>
+        </div>
+        <div class="item item-icon-left"><i class="icon ion-email" style="font-size:30px;"></i><font class="text-bolder">Email Address</font>
+          <p>{{profileData.attendee_Email}}</p>
+        </div>
+        <div class="item item-icon-left"><i class="icon ion-bowtie" style="font-size:30px;"></i><font class="text-bolder">Designation</font>
+          <p>{{profileData.attendee_Designation}}</p>
+        </div>
+
+        <div class="item item-icon-left"><i class="icon ion-ios-telephone" style="font-size:30px;"></i><font class="text-bolder">Phone Number</font>
+          <p>{{profileData.attendee_PhoneNumber}}</p>
+        </div>
+        <div class="item item-icon-left"><i class="icon ion-home" style="font-size:30px;"></i><font class="text-bolder">Company</font>
+          <p>{{profileData.attendee_Company}}</p>
+        </div>
+		<div class="item item-icon-left"><i class="icon ion-person" style="font-size:30px;"></i><font class="text-bolder">Attendee Type</font>
+          <p>{{profileData.attendee_type}}</p>
+        </div>
+		<div class="item item-icon-left"><i class="icon ion-compose" style="font-size:30px;"></i><font class="text-bolder">Comments</font>
+          <p>{{profileData.comments}}</p>
+        </div>
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

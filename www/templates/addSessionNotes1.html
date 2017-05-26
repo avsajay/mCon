@@ -1,0 +1,16 @@
+<ion-view cache-view="false" title="Add Session Notes">
+  <ion-content padding="true" class="has-header">
+
+            <form name="sessionNotes1Form" class="container" ng-submit="submitForm(sessionNotes1Form.$valid)" novalidate>
+              <br/>
+			<h3 style="text-align: left">Notes:</h3><br/>
+
+        <label class="item item-input">
+          <textarea rows="13" placeholder="Add your context.." ng-model="params.notes"></textarea>
+        </label>
+
+		 <button class="button button-calm button-block roundedButtons" value="save" ng-disabled="sessionNotes1Form.$invalid" ng-click="add(params)">Save</button>
+			</form>
+    
+  </ion-content>
+</ion-view>
